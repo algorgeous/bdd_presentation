@@ -6,3 +6,9 @@ Feature: Contact form
   Scenario: Contact us link should be present
     Given I am on the homepage
     Then I should see the link "Contact Us"
+
+  Scenario: Contact us page should be present
+    Given I am on the homepage
+    Then I should see the link "Contact Us"
+    And I click "Contact Us"
+    Then I should see the heading "Contact Us"
