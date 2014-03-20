@@ -18,8 +18,10 @@ Feature: Contact form
     And I should see the text "Your email"
     And I should see the text "Message"
 
+    @javascript
   Scenario: Visitor must fill out all required fields
     When I press "Submit"
     And I should see the error message "Your name field is required."
     And I should see the error message "Your email field is required."
+    And I break
     And I should see the error message "Massage field is required."
