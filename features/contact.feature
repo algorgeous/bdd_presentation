@@ -26,3 +26,12 @@ Feature: Contact form
       | Your name field is required.  |
       | Your email field is required. |
       | Message field is required.    |
+
+    @javascript
+  Scenario: Visitor can submit the Contact Us form
+    When I fill in "Your name" with "George"
+    When I fill in "Your email" with "george@example.com"
+    When I fill in "Message" with "Efficiently integrate client-centric testing procedures after sticky technologies. Phosfluorescently drive vertical technologies before corporate data. Appropriately engineer market positioning human."
+    When I press "Submit"
+    And I should see the text "Thank you, your submission has been received."
+    And I should see the link "Go back to the form"
