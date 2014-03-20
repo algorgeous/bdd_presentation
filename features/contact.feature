@@ -12,3 +12,5 @@ Feature: Contact form
     Then I should see the link "Contact Us"
     And I click "Contact Us"
     Then I should see the heading "Contact Us"
+    And the url should match "/contact-us"
+    And the response status code should not be 403
