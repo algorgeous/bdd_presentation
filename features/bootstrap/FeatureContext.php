@@ -37,6 +37,19 @@ class FeatureContext extends Drupal\DrupalExtension\Context\DrupalContext
     }
 
   /**
+   * @Given /^an article with a Title of "([^"]*)" and a Post Date of "([^"]*)"$/
+   */
+  public function anArticleWithATitleOfAndAPostDateOf($title, $date) {
+      return array(
+	new Given('I go to "node/add/article"'),
+	new Given("I fill in \"Title\" with \"$title\""),
+	new When("I fill in \"$date\" for \"edit-field-post-date-und-0-value-date\""),
+	new When('I fill in "Body" with "Professionally disseminate bleeding-edge portals whereas ethical benefits."'),
+	new When('I press "Save"'),
+      );
+  }
+
+  /**
    * @Given /^a user "([^"]*)" with password "([^"]*)"$/
    */
   public function aUserWithPassword($arg1, $arg2) {
