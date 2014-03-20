@@ -1,0 +1,10 @@
+{
+  "require": {
+    "behat/mink-extension": "*",
+    "behat/mink-selenium-driver": "*",
+    "drupal/drupal-extension": "*"
+  },
+  "config": {
+    "bin-dir": "bin/"
+  }
+}
